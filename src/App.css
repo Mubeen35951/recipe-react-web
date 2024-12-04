@@ -1,4 +1,11 @@
-/* App.css */
+/* General Styling */
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* App Container */
 .App {
   font-family: 'Arial', sans-serif;
   text-align: center;
@@ -6,43 +13,52 @@
   padding: 20px;
 }
 
+/* App Title */
 .app-title {
   font-size: 2.5rem;
   color: #2c3e50;
   margin-bottom: 20px;
 }
 
+/* Search Bar */
 .search-bar input {
   padding: 10px;
   font-size: 1.2rem;
-  width: 60%;
-  margin-bottom: 20px;
+  width: 100%; /* Default full-width */
+  max-width: 600px;
+  margin: 0 auto 20px auto; /* Center input */
   border-radius: 5px;
   border: 1px solid #ddd;
 }
 
+/* Recipe List */
 .recipe-list {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  gap: 20px;
 }
 
+/* Recipe Card */
 .recipe-card {
   background-color: white;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  width: 250px;
+  width: 100%; /* Default full-width */
+  max-width: 250px; /* Limit max size */
   margin: 10px;
   padding: 15px;
   text-align: center;
 }
 
+/* Recipe Image */
 .recipe-card img {
   width: 100%;
   height: auto;
   border-radius: 5px;
 }
 
+/* Recipe Text */
 .recipe-card h3 {
   font-size: 1.5rem;
   color: #34495e;
@@ -53,6 +69,7 @@
   color: #7f8c8d;
 }
 
+/* View Recipe Button */
 .view-recipe-btn {
   display: inline-block;
   margin-top: 10px;
@@ -67,7 +84,7 @@
   background-color: #2980b9;
 }
 
-/* RecipeDetail.css */
+/* Recipe Detail Page */
 .recipe-detail {
   max-width: 800px;
   margin: auto;
@@ -89,11 +106,6 @@
   color: #2c3e50;
 }
 
-.recipe-detail h3 {
-  font-size: 1.5rem;
-  color: #34495e;
-}
-
 .recipe-detail ul,
 .recipe-detail ol {
   text-align: left;
@@ -103,4 +115,43 @@
 .recipe-detail li {
   font-size: 1.1rem;
   color: #7f8c8d;
+}
+
+/* Responsive Design with Media Queries */
+@media (max-width: 768px) {
+  .recipe-list {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .recipe-card {
+    max-width: 100%;
+    margin: 10px 0;
+  }
+
+  .app-title {
+    font-size: 2rem;
+  }
+
+  .search-bar input {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .app-title {
+    font-size: 1.5rem;
+  }
+
+  .recipe-card h3 {
+    font-size: 1.2rem;
+  }
+
+  .recipe-card p {
+    font-size: 0.9rem;
+  }
+
+  .view-recipe-btn {
+    padding: 8px 10px;
+  }
 }
