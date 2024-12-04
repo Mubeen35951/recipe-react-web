@@ -1,0 +1,13 @@
+
+.recipe-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .recipe-list .recipe-card {
+    width: 280px;
+    margin: 15px;
+  }
+  

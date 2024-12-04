@@ -1,0 +1,32 @@
+/* src/App.css */
+.search-bar input {
+    padding: 10px;
+    font-size: 1rem;
+    width: 100%;
+    max-width: 400px;
+    margin: 20px 0;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+  }
+  
+  .recipe-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .recipe-card {
+    width: 200px;
+    margin: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .recipe-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+  }
+  
